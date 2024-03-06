@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Registration From</title>
+</head>
+<body>
+      <h1>Student Registration Form</h1>
+      <form method="post" action="form.php">
+            <fieldset>
+                  <legend>Login Information</legend>
+                  Username:<input name="Username" type="text"><br><br>
+                  Password:<input name="pwd" type="password"><br><br>
+                  Email: <input type="text" name="email">
+            </fieldset>
+            <fieldset>
+                  <legend>General Information</legend>
+                  
+                   Name: <input type="text"><br><br>
+                  Gender:  <input type="radio" name="Gender" id="male"> <label for="male">male</label>
+                  <input type="radio" name="Gender" id="female"> <label for="female">female</label>
+                  <input type="radio" name="Gender" id="others"> <label for="others">others</label><br><br>
+                  Date of Birth: <input type="date"><br><br>
+                  Father's name: <input type="text"><br><br>
+                  Mother's name: <input type="text"><br><br>
+                  <label for="your-file">Upload your photo</label>
+                  <input accept=".jpg,.png,.jpeg" type="file" id="your-file"><br><br>
+                  <label for="cv">Upload your CV</label>
+                  <input accept=".doc,.pdf,.docx" type="file" id="cv">
+            </fieldset>
+            <fieldset>
+                  <legend>Address</legend>
+                  <div>
+                        Country:
+                        <select >
+                            <option value="NEPAL">NEPAL</option>
+                            <option value="USA">USA</option>
+                            <option value="CANADA">CANADA</option>
+                            <option value="INDIA">INDIA</option>
+                        <option value="">JAPAN</option>
+                        <option value="">CHINA</option>
+                        <option value="">KOREA</option>
+                        </select> <br><br>
+                    </div>
+                        Current Address:<input name="text" type="text">
+
+
+            </fieldset>
+            <fieldset>
+                  <legend>Contact</legend>
+            Mobile no.: <input type="number" >
+            <select>
+                  <option value="">977</option>
+                  <option value="">978</option>
+                  <option value="">980</option>
+                   <option value="">981</option>
+                  <option value="">982</option>
+                  <option value="">983</option>
+              </select> <br><br>
+            Landline: <input type="number">
+
+
+            </fieldset>
+            <fieldset>
+                  <legend>Education Level</legend>
+                  
+                  <input type="checkbox">SEE(10)
+                  <input type="checkbox">+2
+                  <input type="checkbox">Bachelor
+                  <input type="checkbox">Master
+                  
+            </fieldset>
+            <fieldset>
+                  <legend>Coding Skills</legend>
+                  
+            <input type="checkbox" name="skills[]" id="html"> <label for="html">HTML</label>
+            <input type="checkbox" name="skills[]" id="css"><label for="css">CSS</label>
+            <input type="checkbox" name="skills[]" id="java"><label for="java">JavaScript</label>
+            <input type="checkbox" name="skills[]" id="flutter"><label for="flutter">Flutter</label>
+            <input type="checkbox" name="skills[]" id="phython"><label for="phython">Phython</label>
+
+            </fieldset>
+            <input type="submit" value="submit">
+      </form>
+</body>
+</html>
