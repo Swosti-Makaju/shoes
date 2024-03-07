@@ -10,78 +10,94 @@
       <form method="post" action="form.php">
             <fieldset>
                   <legend>Login Information</legend>
-                  Username:<input name="Username" type="text"><br><br>
+                  Username:<input minlength="5" maxlength="10" name="Username" type="text"><br><br>
                   Password:<input name="pwd" type="password"><br><br>
-                  Email: <input type="text" name="email">
+                  Email: <input type="email" name="email">
             </fieldset>
             <fieldset>
                   <legend>General Information</legend>
                   
-                   Name: <input type="text"><br><br>
-                  Gender:  <input type="radio" name="Gender" id="male"> <label for="male">male</label>
-                  <input type="radio" name="Gender" id="female"> <label for="female">female</label>
-                  <input type="radio" name="Gender" id="others"> <label for="others">others</label><br><br>
-                  Date of Birth: <input type="date"><br><br>
-                  Father's name: <input type="text"><br><br>
-                  Mother's name: <input type="text"><br><br>
+                   Name: <input name="fullname" type="text"><br><br>
+                  Gender:  <input type="radio" name="Gender" id="male" value="Male"> <label for="male">male</label>
+                  <input type="radio" name="Gender" id="female" value="Female"> <label for="female">female</label>
+                  <input type="radio" name="Gender" id="others" value="Other"> <label for="others">others</label><br><br>
+                  Date of Birth: <input max="2023-10-01" type="date" name="dob"><br><br>
+                  Father's name: <input type="text" name="father_name"><br><br>
+                  Mother's name: <input type="text" name="mother_name"><br><br>
                   <label for="your-file">Upload your photo</label>
-                  <input accept=".jpg,.png,.jpeg" type="file" id="your-file"><br><br>
+                  <input accept=".jpg,.png,.jpeg" type="file" name="photo" id="your-file"><br><br>
                   <label for="cv">Upload your CV</label>
-                  <input accept=".doc,.pdf,.docx" type="file" id="cv">
+                  <input accept=".doc,.pdf,.docx" type="file" name="cv" id="cv">
             </fieldset>
             <fieldset>
                   <legend>Address</legend>
                   <div>
                         Country:
-                        <select >
-                            <option value="NEPAL">NEPAL</option>
-                            <option value="USA">USA</option>
-                            <option value="CANADA">CANADA</option>
-                            <option value="INDIA">INDIA</option>
-                        <option value="">JAPAN</option>
-                        <option value="">CHINA</option>
-                        <option value="">KOREA</option>
+                        <select name="country" id="country">
+                              <option value="">Select country</option>
+                              <optgroup label="Asia">
+                                    <option value="NEPAL">NEPAL</option>
+                                    <option selected value="INDIA">INDIA</option>
+                                    <option selected value="Japan">JAPAN</option>
+                                    <option value="China">CHINA</option>
+                                    <option value="Korea">KOREA</option>
+                              </optgroup>
+
+                              <optgroup label="North America">
+                                    <option value="USA">USA</option>
+                                    <option value="CANADA">CANADA</option>
+                              </optgroup>
+                            
                         </select> <br><br>
                     </div>
-                        Current Address:<input name="text" type="text">
+                        Current Address:<input name="current_address" type="text">
 
 
             </fieldset>
             <fieldset>
                   <legend>Contact</legend>
-            Mobile no.: <input type="number" >
-            <select>
+            Country Code:
+            <select name="country_code">
                   <option value="">977</option>
                   <option value="">978</option>
                   <option value="">980</option>
                    <option value="">981</option>
                   <option value="">982</option>
                   <option value="">983</option>
-              </select> <br><br>
-            Landline: <input type="number">
+              </select>
+              Mobile no.: <input min="100" max="200" step="5" type="number" name="contact_number" >
+              <br><br>
+            Landline: <input type="number" name="landline">
 
 
             </fieldset>
             <fieldset>
                   <legend>Education Level</legend>
                   
-                  <input type="checkbox">SEE(10)
-                  <input type="checkbox">+2
-                  <input type="checkbox">Bachelor
-                  <input type="checkbox">Master
+                  <input name="levels[]" type="checkbox" value="SEE">SEE(10)
+                  <input name="levels[]" value="+2" type="checkbox">+2
+                  <input name="levels[]" value="Bachelor" type="checkbox">Bachelor
+                  <input name="levels[]" value="Master" type="checkbox">Master
                   
             </fieldset>
             <fieldset>
                   <legend>Coding Skills</legend>
                   
-            <input type="checkbox" name="skills[]" id="html"> <label for="html">HTML</label>
-            <input type="checkbox" name="skills[]" id="css"><label for="css">CSS</label>
-            <input type="checkbox" name="skills[]" id="java"><label for="java">JavaScript</label>
-            <input type="checkbox" name="skills[]" id="flutter"><label for="flutter">Flutter</label>
-            <input type="checkbox" name="skills[]" id="phython"><label for="phython">Phython</label>
+            <input checked type="checkbox" name="skills[]" id="html" value="HTML"> <label for="html">HTML</label>
+            <input type="checkbox" name="skills[]" id="css" value="CSS"><label for="css">CSS</label>
+            <input type="checkbox" name="skills[]" id="java" value="Java"><label for="java">JavaScript</label>
+            <input type="checkbox" name="skills[]" id="flutter" value="Flutter"><label for="flutter">Flutter</label>
+            <input type="checkbox" name="skills[]" id="phython" value="Python"><label for="phython">Phython</label>
 
             </fieldset>
-            <input type="submit" value="submit">
+
+            <fieldset>
+                  <legend>Describe yourself</legend>
+                  <textarea name="about" id="about" cols="50" rows="10">Hello there</textarea>
+            </fieldset>
+            
+            <button type="submit">Submit Form</button>
+
       </form>
 </body>
 </html>
