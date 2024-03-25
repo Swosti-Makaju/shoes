@@ -1,0 +1,91 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* Basic styling */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    
+    header {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 2em 0;
+    }
+    
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    #product-info {
+      display: flex;
+      align-items: center;
+    }
+    
+    #product-info img {
+      max-width: 100%;
+      height: auto;
+      margin-right: 20px;
+    }
+    
+    .product-details {
+      flex: 1;
+    }
+    
+    .product-details h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    
+    .product-details ul {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+    
+    .price {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+    
+    .buy-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    
+    #testimonials {
+      margin-top: 40px;
+    }
+    
+    .testimonial {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .testimonial img {
+      max-width: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+    .customer-name {
+      font-weight: bold;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+    }
+    
