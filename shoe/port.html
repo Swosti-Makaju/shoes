@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoes Product</title>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #b8ae97;
+}
+
+.product-card {
+  display: flex;
+  gap: 20px;
+  background-color: #fff;
+  width: 80vw;
+  margin: 100px auto;
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.product-img {
+  width: 35%;
+  object-fit: cover;
+}
+
+.product-name {
+  font-size: 22px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.product-tag {
+  background-color: #b8ae97;
+  padding: 4px 8px;
+  color: #fff;
+  font-size: 12px;
+}
+
+.product-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.discounted-price {
+  font-weight: 500;
+  margin-right: 12px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.tabbar ul {
+  margin: 20px 0;
+  display: flex;
+  gap: 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabbar ul li {
+  color: #aaa;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.tabbar ul li.active {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.description-text {
+  color: #888;
+  line-height: 1.3;
+}
+
+.title {
+  margin: 12px 0 8px 0;
+}
+
+.size-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.size-list li {
+  color: #888;
+  list-style: none;
+  height: 50px;
+  width: 70px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.size-list li.size-active {
+  color: #000;
+  font-weight: 700;
+  border: 2px solid #000;
+}
+
+.color-section {
+  margin-bottom: 18px;
+}
+
+.outer-circle {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid grey;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-circle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: indigo;
+}
+
+.colors {
+  display: flex;
+  gap: 12px;
+}
+
+.teal-color {
+  background-color: teal;
+}
+
+.red-color {
+  background-color: red;
+}
+
+.btn {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 12px 24px;
+  width: 170px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn:hover {
+  border: 1px solid #000;
+}
+
+@media (max-width: 800px) {
+  /* body {
+    background-color: teal;
+  } */
+
+  .product-card {
+    flex-direction: column;
+  }
+
+  .product-img {
+    width: 100%;
+  }
+}
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+   
+  </head>
+  <body>
+    <div class="product-card">
+      <!-- IMAGE SECTION (LEFT SECTION) -->
+      <img
+        src="https://images.pexels.com/photos/1456737/pexels-photo-1456737.jpeg?auto=compress&cs=tinysrgb&dpr=1"
+        alt="Shoes Image"
+        class="product-img"
+      />
+
+      <!-- PRODUCT DESCRIPTION SECTION (RIGHT SECTION) -->
+      <section class="product-description">
+        <div class="product-title">
+          <p class="product-name">Replica Sneakers</p>
+          <span class="product-tag">NEW</span>
+        </div>
+
+        <span class="discounted-price">&pound; 660.00</span>
+        <span class="original-price">&pound; 1100.00</span>
+
+        <!-- TABBAR -->
+        <div class="tabbar">
+          <ul>
+            <li class="active">Description</li>
+            <li>Details</li>
+            <li>Reviews</li>
+            <li>Size & Fit</li>
+          </ul>
+        </div>
+
+        <p class="description-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia id
+          eligendi omnis laudantium similique alias iusto voluptate, voluptatum
+          porro ullam! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Repellendus cupiditate.
+        </p>
+
+        <!-- SIZE SECTION -->
+        <div class="size-section">
+          <h4 class="title">SIZE</h4>
+          <ul class="size-list">
+            <li>7</li>
+            <li>8</li>
+            <li class="size-active">9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>11</li>
+            <li>11</li>
+            <li>11</li>
+          </ul>
+        </div>
+
+        <!-- COLOR SECTION -->
+        <div class="color-section">
+          <h4 class="title">COLOR</h4>
+
+          <div class="colors">
+            <div class="outer-circle">
+              <div class="inner-circle"></div>
+            </div>
+            <div class="outer-circle">
+              <div class="inner-circle teal-color"></div>
+            </div>
+            <div class="outer-circle">
+              <div class="inner-circle red-color"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- BUTTONS -->
+        <button class="btn">Add to Cart</button>
+        <button class="btn">Add to Wishlist</button>
+      </section>
+    </div>
+  </body>
+</html>
