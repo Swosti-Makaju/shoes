@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            const apm = hours >= 12 ? 'PM' : 'AM';
+            const hour = hours % 12 || 12;
+            const timeString = `${hour}:${minutes}:${seconds} ${apm}`;
+            document.getElementById('time').innerText = timeString;
+            console.log('working');
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/calculator');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Calculator', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg,
+                    rgba(2, 0, 36, 1) 0%,
+                    rgba(27, 27, 143, 1) 45%,
+                    rgba(0, 212, 255, 1) 100%);
+        }
+
+        .clock-wrapper {
+            width: 50%;
+            height: 20%;
+
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(4.6px);
+            -webkit-backdrop-filter: blur(4.6px);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+        }
+
+        #time {
+            color: #c0c0c0;
+            font-size: 100px;
+        }
+
+        h1 {
+            color: rgb(130, 28, 190);
+            text-align: center;
+        }
+    </style>
+    <title>Digital Clock</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Digital Clock</h1>
+        <div class="clock-wrapper">
+            <!-- <h1>This is watch.</h1> -->
+            <div id="time"></div>
+        </div>
+    </div>
+</body>
+
+</html>
